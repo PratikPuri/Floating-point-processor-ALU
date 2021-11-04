@@ -1,0 +1,6 @@
+verilog work "Adder.v"
+verilog work "Subtractor.v"
+verilog work "Multiplication.v"
+verilog work "Divider.v"
+verilog work "Comparator.v"
+verilog work "AluWrapper.v"

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/AluWrapper.xst" -ofn "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/AluWrapper.syr" 

@@ -1,0 +1,36 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE FALSE
+SET_PREFERENCE devicefamily kintex7
+SET_PREFERENCE device xc7k325t
+SET_PREFERENCE speedgrade -2
+SET_PREFERENCE package ffg900
+SET_PREFERENCE verilogsim true
+SET_PREFERENCE vhdlsim false
+SET_PREFERENCE simulationfiles Behavioral
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE outputdirectory I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/ipcore_dir/
+SET_PREFERENCE workingdirectory I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/ipcore_dir/tmp/
+SET_PREFERENCE subworkingdirectory I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/ipcore_dir/tmp/_cg/
+SET_PREFERENCE transientdirectory I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/ipcore_dir/tmp/_cg/_dbg/
+SET_PREFERENCE designentry Verilog
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE addpads false
+SET_PREFERENCE projectname coregen
+SET_PREFERENCE formalverification false
+SET_PREFERENCE asysymbol false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE createndf false
+SET_PREFERENCE removerpms false
+SET_PARAMETER Component_Name usb_uart
+SET_CORE_NAME AXI Bus Functional Model
+SET_CORE_VERSION 2.1
+SET_CORE_VLNV xilinx.com:ip:cdn_axi_bfm:2.1
+SET_CORE_CLASS com.xilinx.ip.cdn_axi_bfm_v2_1.cdn_axi_bfm_v2_1
+SET_CORE_PATH C:/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/cdn_axi_bfm_v2_1
+SET_CORE_GUIPATH C:/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/cdn_axi_bfm_v2_1/gui/cdn_axi_bfm_v2_1.tcl
+SET_CORE_DATASHEET C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\cdn_axi_bfm_v2_1\doc\ds824_axi_bfm.pdf
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\cdn_axi_bfm_v2_1\doc\ds824_axi_bfm.pdf><ds824_axi_bfm.pdf>
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\cdn_axi_bfm_v2_1\doc\cdn_axi_bfm_v2_1_vinfo.html><cdn_axi_bfm_v2_1_vinfo.html>
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\cdn_axi_bfm_v2_1\cdn_axi_bfm_v2_1_readme.txt><cdn_axi_bfm_v2_1_readme.txt>

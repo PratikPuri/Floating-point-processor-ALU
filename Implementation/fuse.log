@@ -1,0 +1,43 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/test_MP_isim_beh.exe" -prj "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/test_MP_beh.prj" "work.test_MP" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/Adder.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/Subtractor.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/Multiplication.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/Divider.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/Comparator.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/RegStack0_15.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/PipelineReg.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/InstructMem.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/cntrlUnit.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/CntrlPipeline.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/AluWrapper.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/aluWB.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/MicroProcessor.v" into library work
+Analyzing Verilog file "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/test_MP.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module cntrlUnit
+Compiling module CntrlPipeline
+Compiling module InstructMem
+Compiling module RegStack0_15
+Compiling module PipelineReg
+Compiling module aluWB
+Compiling module Adder
+Compiling module Subtractor
+Compiling module Multiplication
+Compiling module Divider
+Compiling module Comparator
+Compiling module AluWrapper
+Compiling module MicroProcessor
+Compiling module test_MP
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 15 Verilog Units
+Built simulation executable I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/test_MP_isim_beh.exe
+Fuse Memory Usage: 28264 KB
+Fuse CPU Usage: 609 ms

@@ -1,0 +1,863 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: MicroProcessor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MicroProcessor.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MicroProcessor"
+Output Format                      : NGC
+Target Device                      : xc7k325t-2-ffg900
+
+---- Source Options
+Top Module Name                    : MicroProcessor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Adder.v" into library work
+Parsing module <Adder>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Subtractor.v" into library work
+Parsing module <Subtractor>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Multiplication.v" into library work
+Parsing module <Multiplication>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Divider.v" into library work
+Parsing module <Divider>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Comparator.v" into library work
+Parsing module <Comparator>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\RegStack0_15.v" into library work
+Parsing module <RegStack0_15>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\PipelineReg.v" into library work
+Parsing module <PipelineReg>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\InstructMem.v" into library work
+Parsing module <InstructMem>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\cntrlUnit.v" into library work
+Parsing module <cntrlUnit>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\CntrlPipeline.v" into library work
+Parsing module <CntrlPipeline>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\AluWrapper.v" into library work
+Parsing module <AluWrapper>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\aluWB.v" into library work
+Parsing module <aluWB>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" into library work
+Parsing module <MicroProcessor>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <MicroProcessor>.
+
+Elaborating module <cntrlUnit>.
+WARNING:HDLCompiler:413 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\cntrlUnit.v" Line 74: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\cntrlUnit.v" Line 82: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" Line 32: Assignment to insReadEn ignored, since the identifier is never used
+
+Elaborating module <CntrlPipeline>.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\CntrlPipeline.v" Line 74: Assignment to regWREnTemp4 ignored, since the identifier is never used
+
+Elaborating module <InstructMem>.
+Reading initialization file \"ins.tv\".
+WARNING:HDLCompiler:1670 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\InstructMem.v" Line 30: Signal <instructReg> in initial block is partially initialized.
+WARNING:HDLCompiler:413 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\InstructMem.v" Line 40: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\InstructMem.v" Line 34: Assignment to temp ignored, since the identifier is never used
+
+Elaborating module <RegStack0_15>.
+Reading initialization file \"reg.tv\".
+WARNING:HDLCompiler:413 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\RegStack0_15.v" Line 36: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\RegStack0_15.v" Line 36: Assignment to wrtAd2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\RegStack0_15.v" Line 38: Assignment to temp1 ignored, since the identifier is never used
+
+Elaborating module <PipelineReg>.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" Line 54: Assignment to regOutDelay ignored, since the identifier is never used
+
+Elaborating module <aluWB>.
+WARNING:HDLCompiler:91 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\aluWB.v" Line 33: Signal <mux2Src1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\aluWB.v" Line 35: Signal <mux2Src2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <AluWrapper>.
+
+Elaborating module <Adder>.
+
+Elaborating module <Subtractor>.
+
+Elaborating module <Multiplication>.
+
+Elaborating module <Divider>.
+
+Elaborating module <Comparator>.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\AluWrapper.v" Line 54: Assignment to divSign ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" Line 65: Assignment to CarryOut ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" Line 25: Net <OpcodeDelay[2]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MicroProcessor>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v".
+INFO:Xst:3210 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" line 31: Output port <insReadEn> of the instance <MPCtrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" line 51: Output port <regOutDelayWB> of the instance <MPpipeline> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\MicroProcessor.v" line 61: Output port <carryOut> of the instance <MPAlu> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <OpcodeDelay> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <MicroProcessor> synthesized.
+
+Synthesizing Unit <cntrlUnit>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\cntrlUnit.v".
+WARNING:Xst:647 - Input <OpcodeDelay> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <divFlag> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mulStall> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <mux22>.
+    Found 1-bit register for signal <stall>.
+    Found 1-bit register for signal <mux1>.
+    Found 1-bit register for signal <mux2>.
+    Found 1-bit register for signal <regWrtEn>.
+    Found 1-bit register for signal <stall1>.
+    Found 1-bit register for signal <stall2>.
+    Found 1-bit register for signal <mux21>.
+    Found 1-bit register for signal <PC_Inc>.
+    Found 4-bit register for signal <wrAd1>.
+    Found 4-bit register for signal <wrAd2>.
+    Found 3-bit register for signal <aluCntrl>.
+    Found 3-bit register for signal <prevOpcode>.
+    Found 1-bit register for signal <reg2WrtEn>.
+    Found 1-bit register for signal <regRdEn>.
+    Found 1-bit register for signal <insWriteEn>.
+    Found 1-bit register for signal <muxSrc1WB>.
+    Found 1-bit register for signal <muxSrc2WB>.
+    Found 1-bit register for signal <mux2Src1>.
+    Found 1-bit register for signal <mux2Src2>.
+    Found 4-bit comparator equal for signal <wrAd1[3]_src1Ad[3]_equal_12_o> created at line 135
+    Found 4-bit comparator equal for signal <wrAd1[3]_src2Ad[3]_equal_13_o> created at line 135
+    Found 4-bit comparator equal for signal <wrAd2[3]_src1Ad[3]_equal_14_o> created at line 135
+    Found 4-bit comparator equal for signal <wrAd2[3]_src2Ad[3]_equal_19_o> created at line 155
+    WARNING:Xst:2404 -  FFs/Latches <muxSrc2Inc<0:0>> (without init value) have a constant value of 0 in block <cntrlUnit>.
+    Summary:
+	inferred  30 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  20 Multiplexer(s).
+Unit <cntrlUnit> synthesized.
+
+Synthesizing Unit <CntrlPipeline>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\CntrlPipeline.v".
+WARNING:Xst:647 - Input <mulStall> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <stall2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <stall1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <aluSrc2EnTemp>.
+    Found 3-bit register for signal <aluCntrlTemp>.
+    Found 3-bit register for signal <aluCntrlp2>.
+    Found 3-bit register for signal <aluCntrlp3>.
+    Found 1-bit register for signal <aluSrc1Enp2>.
+    Found 1-bit register for signal <aluSrc2Enp2>.
+    Found 1-bit register for signal <muxIncDecWB2Temp>.
+    Found 1-bit register for signal <muxWB1p2Temp>.
+    Found 1-bit register for signal <muxWB2Temp>.
+    Found 1-bit register for signal <regWREnTemp>.
+    Found 1-bit register for signal <regWREnTemp1>.
+    Found 1-bit register for signal <regWREnTemp2>.
+    Found 1-bit register for signal <reg2WREnTemp>.
+    Found 1-bit register for signal <reg2WREnTemp1>.
+    Found 1-bit register for signal <reg2WREnTemp2>.
+    Found 1-bit register for signal <muxWB1p2>.
+    Found 1-bit register for signal <muxWB2p2>.
+    Found 1-bit register for signal <muxIncDecWB2p2>.
+    Found 1-bit register for signal <mux21temp>.
+    Found 1-bit register for signal <mux22temp>.
+    Found 1-bit register for signal <mux21WBp2>.
+    Found 1-bit register for signal <mux22WBp2>.
+    Found 1-bit register for signal <regWREnp3>.
+    Found 1-bit register for signal <reg2WREnp3>.
+    Found 1-bit register for signal <regRdEnp>.
+    Found 1-bit register for signal <aluSrc1EnTemp>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <CntrlPipeline> synthesized.
+
+Synthesizing Unit <InstructMem>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\InstructMem.v".
+    Found 16-bit register for signal <instructWord>.
+    Found 4-bit register for signal <PC>.
+    Found 4-bit adder for signal <PC[3]_GND_5_o_add_6_OUT> created at line 57.
+    Found 16x16-bit single-port RAM <Mram_instructReg> for signal <instructReg>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <InstructMem> synthesized.
+
+Synthesizing Unit <RegStack0_15>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\RegStack0_15.v".
+    Found 32-bit register for signal <regSrc2Val>.
+    Found 32-bit register for signal <regSrc1Val>.
+    Found 4-bit adder for signal <regOutAd[3]_GND_6_o_add_7_OUT> created at line 65.
+    Found 16x32-bit quad-port RAM <Mram_regStack> for signal <regStack>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <RegStack0_15> synthesized.
+
+Synthesizing Unit <PipelineReg>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\PipelineReg.v".
+WARNING:Xst:647 - Input <stall1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <regSrc2Adp>.
+    Found 4-bit register for signal <regOutAdp>.
+    Found 32-bit register for signal <aluSrc1p>.
+    Found 32-bit register for signal <aluSrc2p>.
+    Found 8-bit register for signal <n0038[7:0]>.
+    Found 4-bit register for signal <regOutDelayWB>.
+    Found 4-bit register for signal <regSrc1Adp>.
+    Summary:
+	inferred  88 D-type flip-flop(s).
+Unit <PipelineReg> synthesized.
+
+Synthesizing Unit <aluWB>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\aluWB.v".
+WARNING:Xst:647 - Input <outWB<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Opcode> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <muxinc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <divFlag> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <stall> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <outp<31:0>>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <aluWB> synthesized.
+
+Synthesizing Unit <AluWrapper>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\AluWrapper.v".
+    Found 1-bit register for signal <divFlag>.
+    Found 1-bit register for signal <divFlag1>.
+    Found 1-bit register for signal <divFlag2>.
+    Found 64-bit register for signal <aluOut>.
+    Found 1-bit register for signal <carryOut>.
+    Found 32-bit register for signal <divCount>.
+    Found 32-bit subtractor for signal <divOut[31]_aluSrc2[31]_sub_7_OUT> created at line 107.
+    Found 33-bit adder for signal <n0062[32:0]> created at line 98.
+    Found 32-bit subtractor for signal <divOut[31]_aluSrc2[31]_sub_10_OUT> created at line 116.
+    Found 32-bit comparator greater for signal <divOut[31]_aluSrc2[31]_LessThan_2_o> created at line 94
+    Found 32-bit comparator greater for signal <divOut[31]_aluSrc2[31]_LessThan_8_o> created at line 107
+    Found 32-bit comparator greater for signal <divOut[31]_aluSrc2[31]_LessThan_11_o> created at line 116
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 100 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  19 Multiplexer(s).
+Unit <AluWrapper> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Adder.v".
+    Found 33-bit adder for signal <n0022> created at line 31.
+    Found 33-bit adder for signal <n0026> created at line 32.
+    Found 33-bit adder for signal <BUS_0002_GND_10_o_add_4_OUT> created at line 32.
+    Found 33-bit adder for signal <BUS_0002_GND_10_o_add_6_OUT> created at line 32.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <Adder> synthesized.
+
+Synthesizing Unit <Subtractor>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Subtractor.v".
+    Found 32-bit adder for signal <compSrc2> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Subtractor> synthesized.
+
+Synthesizing Unit <Multiplication>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Multiplication.v".
+    Found 64-bit adder for signal <src1[31]_GND_12_o_add_5_OUT> created at line 29.
+    Found 64-bit adder for signal <BUS_0003_GND_12_o_add_10_OUT> created at line 30.
+    Found 33-bit adder for signal <n0029> created at line 31.
+    Found 33-bit adder for signal <n0028> created at line 31.
+    Found 32x32-bit multiplier for signal <src1[31]_src2[31]_MuLt_0_OUT> created at line 28.
+    Found 32x33-bit multiplier for signal <n0017> created at line 29.
+    Found 33x32-bit multiplier for signal <n0020> created at line 30.
+    Found 33x33-bit multiplier for signal <n0027> created at line 31.
+    Found 64-bit 4-to-1 multiplexer for signal <mulOut> created at line 27.
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   6 Multiplexer(s).
+Unit <Multiplication> synthesized.
+
+Synthesizing Unit <Divider>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Divider.v".
+    Found 32-bit subtractor for signal <src1[31]_src2[31]_sub_2_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <Divider> synthesized.
+
+Synthesizing Unit <Comparator>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Comparator.v".
+    Found 32-bit comparator equal for signal <src1[31]_src2[31]_equal_1_o> created at line 25
+    Found 32-bit comparator greater for signal <src1[31]_src2[31]_LessThan_2_o> created at line 25
+    Summary:
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <Comparator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x16-bit single-port RAM                             : 1
+ 16x32-bit quad-port RAM                               : 1
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 1
+ 33x32-bit multiplier                                  : 2
+ 33x33-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 27
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 19
+ 4-bit adder                                           : 2
+ 64-bit adder                                          : 1
+# Registers                                            : 64
+ 1-bit register                                        : 43
+ 16-bit register                                       : 1
+ 3-bit register                                        : 5
+ 32-bit register                                       : 6
+ 4-bit register                                        : 7
+ 64-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 9
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+ 4-bit comparator equal                                : 4
+# Multiplexers                                         : 69
+ 1-bit 2-to-1 multiplexer                              : 37
+ 16-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 15
+ 4-bit 2-to-1 multiplexer                              : 3
+ 64-bit 2-to-1 multiplexer                             : 13
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <insWriteEn> (without init value) has a constant value of 0 in block <MPCtrl>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <InstructMem>.
+The following registers are absorbed into counter <PC>: 1 register on signal <PC>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_instructReg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     clkA           | connected to signal <Clock>         | rise     |
+    |     weA            | connected to signal <Reset>         | high     |
+    |     addrA          | connected to signal <PC>            |          |
+    |     diA            | connected to signal <_n0026>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InstructMem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RegStack0_15>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regStack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkA           | connected to signal <Clock>         | rise     |
+    |     weA            | connected to signal <Reset>         | high     |
+    |     addrA          | connected to signal <regOutAd>      |          |
+    |     diA            | connected to signal <_n0043>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkB           | connected to signal <Clock>         | rise     |
+    |     weB            | connected to internal node          | high     |
+    |     addrB          | connected to signal <regOutAd[3]_GND_6_o_add_7_OUT> |          |
+    |     diB            | connected to signal <_n0047>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port C                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     addrC          | connected to signal <regSrc1Ad>     |          |
+    |     doC            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port D                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     addrD          | connected to signal <regSrc2Ad>     |          |
+    |     doD            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RegStack0_15> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x16-bit single-port distributed RAM                 : 1
+ 16x32-bit quad-port distributed RAM                   : 1
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 1
+ 33x32-bit multiplier                                  : 2
+ 33x33-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 25
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 18
+ 4-bit adder                                           : 1
+ 64-bit adder                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 362
+ Flip-Flops                                            : 362
+# Comparators                                          : 9
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+ 4-bit comparator equal                                : 4
+# Multiplexers                                         : 146
+ 1-bit 2-to-1 multiplexer                              : 117
+ 32-bit 2-to-1 multiplexer                             : 13
+ 4-bit 2-to-1 multiplexer                              : 3
+ 64-bit 2-to-1 multiplexer                             : 13
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <insWriteEn> (without init value) has a constant value of 0 in block <cntrlUnit>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <MicroProcessor> ...
+
+Optimizing unit <cntrlUnit> ...
+
+Optimizing unit <CntrlPipeline> ...
+
+Optimizing unit <InstructMem> ...
+
+Optimizing unit <RegStack0_15> ...
+
+Optimizing unit <PipelineReg> ...
+
+Optimizing unit <aluWB> ...
+
+Optimizing unit <AluWrapper> ...
+WARNING:Xst:2677 - Node <MPaluCntrlPipeline/muxIncDecWB2p2> of sequential type is unconnected in block <MicroProcessor>.
+WARNING:Xst:2677 - Node <MPaluCntrlPipeline/muxIncDecWB2Temp> of sequential type is unconnected in block <MicroProcessor>.
+WARNING:Xst:2677 - Node <MPAlu/carryOut> of sequential type is unconnected in block <MicroProcessor>.
+INFO:Xst:2261 - The FF/Latch <MPaluCntrlPipeline/aluSrc1EnTemp> in Unit <MicroProcessor> is equivalent to the following FF/Latch, which will be removed : <MPaluCntrlPipeline/aluSrc2EnTemp> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <MPaluCntrlPipeline/aluSrc1Enp2> in Unit <MicroProcessor> is equivalent to the following FF/Latch, which will be removed : <MPaluCntrlPipeline/aluSrc2Enp2> 
+Found area constraint ratio of 100 (+ 5) on block MicroProcessor, actual ratio is 1.
+FlipFlop MPAlu/aluOut_0 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_1 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_10 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_11 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_12 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_13 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_14 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_15 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_16 has been replicated 1 time(s)
+FlipFlop MPAlu/aluOut_2 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_3 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_4 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_5 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_6 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_7 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_8 has been replicated 2 time(s)
+FlipFlop MPAlu/aluOut_9 has been replicated 2 time(s)
+FlipFlop MPaluCntrlPipeline/mux21WBp2 has been replicated 1 time(s)
+FlipFlop MPaluCntrlPipeline/mux22WBp2 has been replicated 2 time(s)
+FlipFlop MPaluCntrlPipeline/muxWB1p2 has been replicated 1 time(s)
+FlipFlop MPaluCntrlPipeline/muxWB2p2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <MicroProcessor> :
+	Found 2-bit shift register for signal <MPaluCntrlPipeline/aluCntrlp3_2>.
+	Found 2-bit shift register for signal <MPaluCntrlPipeline/aluCntrlp3_1>.
+	Found 2-bit shift register for signal <MPaluCntrlPipeline/aluCntrlp3_0>.
+Unit <MicroProcessor> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 905
+ Flip-Flops                                            : 905
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MicroProcessor.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4114
+#      GND                         : 1
+#      INV                         : 131
+#      LUT1                        : 34
+#      LUT2                        : 130
+#      LUT3                        : 193
+#      LUT4                        : 214
+#      LUT5                        : 351
+#      LUT6                        : 1403
+#      MUXCY                       : 663
+#      MUXF7                       : 258
+#      MUXF8                       : 128
+#      VCC                         : 1
+#      XORCY                       : 607
+# FlipFlops/Latches                : 908
+#      FD                          : 36
+#      FDC_1                       : 14
+#      FDCE_1                      : 2
+#      FDE                         : 615
+#      FDE_1                       : 5
+#      FDP_1                       : 1
+#      FDR                         : 5
+#      FDRE                        : 206
+#      FDRE_1                      : 7
+#      FDS                         : 16
+#      FDSE_1                      : 1
+# RAMS                             : 16
+#      RAM32X1S                    : 16
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 65
+#      IBUF                        : 1
+#      OBUF                        : 64
+# DSPs                             : 16
+#      DSP48E1                     : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k325tffg900-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             908  out of  407600     0%  
+ Number of Slice LUTs:                 2475  out of  203800     1%  
+    Number used as Logic:              2456  out of  203800     1%  
+    Number used as Memory:               19  out of  64000     0%  
+       Number used as RAM:               16
+       Number used as SRL:                3
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2692
+   Number with an unused Flip Flop:    1784  out of   2692    66%  
+   Number with an unused LUT:           217  out of   2692     8%  
+   Number of fully used LUT-FF pairs:   691  out of   2692    25%  
+   Number of unique control sets:        36
+
+IO Utilization: 
+ Number of IOs:                          66
+ Number of bonded IOBs:                  66  out of    500    13%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                     16  out of    840     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 927   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 10.021ns (Maximum Frequency: 99.791MHz)
+   Minimum input arrival time before clock: 1.998ns
+   Maximum output required time after clock: 0.705ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 10.021ns (frequency: 99.791MHz)
+  Total number of paths / destination ports: 188102766741 / 1832
+-------------------------------------------------------------------------
+Delay:               10.021ns (Levels of Logic = 54)
+  Source:            MPpipeline/aluSrc2p_0 (FF)
+  Destination:       MPAlu/aluOut_63 (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: MPpipeline/aluSrc2p_0 to MPAlu/aluOut_63
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.236   0.615  MPpipeline/aluSrc2p_0 (MPpipeline/aluSrc2p_0)
+     LUT5:I0->O            1   0.043   0.000  aluWrtBk/mux3211101 (aluWrtBk/mux321110)
+     MUXCY:S->O            1   0.238   0.000  MPAlu/mul/Madd_n0028_cy<0> (MPAlu/mul/Madd_n0028_cy<0>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<1> (MPAlu/mul/Madd_n0028_cy<1>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<2> (MPAlu/mul/Madd_n0028_cy<2>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<3> (MPAlu/mul/Madd_n0028_cy<3>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<4> (MPAlu/mul/Madd_n0028_cy<4>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<5> (MPAlu/mul/Madd_n0028_cy<5>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<6> (MPAlu/mul/Madd_n0028_cy<6>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<7> (MPAlu/mul/Madd_n0028_cy<7>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<8> (MPAlu/mul/Madd_n0028_cy<8>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<9> (MPAlu/mul/Madd_n0028_cy<9>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<10> (MPAlu/mul/Madd_n0028_cy<10>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<11> (MPAlu/mul/Madd_n0028_cy<11>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<12> (MPAlu/mul/Madd_n0028_cy<12>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<13> (MPAlu/mul/Madd_n0028_cy<13>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<14> (MPAlu/mul/Madd_n0028_cy<14>)
+     MUXCY:CI->O           1   0.014   0.000  MPAlu/mul/Madd_n0028_cy<15> (MPAlu/mul/Madd_n0028_cy<15>)
+     XORCY:CI->O           3   0.262   0.351  MPAlu/mul/Madd_n0028_xor<16> (MPAlu/mul/n0028<16>)
+     DSP48E1:B16->PCOUT47    1   2.749   0.000  MPAlu/mul/Mmult_n0017 (MPAlu/mul/Mmult_n0017_PCOUT_to_mul/Mmult_n00171_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.219   0.000  MPAlu/mul/Mmult_n00171 (MPAlu/mul/Mmult_n00171_PCOUT_to_mul/Mmult_n00172_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.219   0.000  MPAlu/mul/Mmult_n00172 (MPAlu/mul/Mmult_n00172_PCOUT_to_mul/Mmult_n00173_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.077   0.495  MPAlu/mul/Mmult_n00173 (MPAlu/mul/n0017<34>)
+     LUT6:I3->O            1   0.043   0.000  MPAlu/mul/Mmux_mulOut3_A281 (MPAlu/mul/Mmux_mulOut3_rs_A<34>)
+     MUXCY:S->O            1   0.238   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<34> (MPAlu/mul/Mmux_mulOut3_rs_cy<34>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<35> (MPAlu/mul/Mmux_mulOut3_rs_cy<35>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<36> (MPAlu/mul/Mmux_mulOut3_rs_cy<36>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<37> (MPAlu/mul/Mmux_mulOut3_rs_cy<37>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<38> (MPAlu/mul/Mmux_mulOut3_rs_cy<38>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<39> (MPAlu/mul/Mmux_mulOut3_rs_cy<39>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<40> (MPAlu/mul/Mmux_mulOut3_rs_cy<40>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<41> (MPAlu/mul/Mmux_mulOut3_rs_cy<41>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<42> (MPAlu/mul/Mmux_mulOut3_rs_cy<42>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<43> (MPAlu/mul/Mmux_mulOut3_rs_cy<43>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<44> (MPAlu/mul/Mmux_mulOut3_rs_cy<44>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<45> (MPAlu/mul/Mmux_mulOut3_rs_cy<45>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<46> (MPAlu/mul/Mmux_mulOut3_rs_cy<46>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<47> (MPAlu/mul/Mmux_mulOut3_rs_cy<47>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<48> (MPAlu/mul/Mmux_mulOut3_rs_cy<48>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<49> (MPAlu/mul/Mmux_mulOut3_rs_cy<49>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<50> (MPAlu/mul/Mmux_mulOut3_rs_cy<50>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<51> (MPAlu/mul/Mmux_mulOut3_rs_cy<51>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<52> (MPAlu/mul/Mmux_mulOut3_rs_cy<52>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<53> (MPAlu/mul/Mmux_mulOut3_rs_cy<53>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<54> (MPAlu/mul/Mmux_mulOut3_rs_cy<54>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<55> (MPAlu/mul/Mmux_mulOut3_rs_cy<55>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<56> (MPAlu/mul/Mmux_mulOut3_rs_cy<56>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<57> (MPAlu/mul/Mmux_mulOut3_rs_cy<57>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<58> (MPAlu/mul/Mmux_mulOut3_rs_cy<58>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<59> (MPAlu/mul/Mmux_mulOut3_rs_cy<59>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<60> (MPAlu/mul/Mmux_mulOut3_rs_cy<60>)
+     MUXCY:CI->O           1   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<61> (MPAlu/mul/Mmux_mulOut3_rs_cy<61>)
+     MUXCY:CI->O           0   0.013   0.000  MPAlu/mul/Mmux_mulOut3_rs_cy<62> (MPAlu/mul/Mmux_mulOut3_rs_cy<62>)
+     XORCY:CI->O           1   0.262   0.350  MPAlu/mul/Mmux_mulOut3_rs_xor<63> (MPAlu/mulOut<63>)
+     LUT4:I3->O            1   0.043   0.000  MPAlu/Mmux_aluCntrl[2]_aluOut[63]_wide_mux_13_OUT1441 (MPAlu/aluCntrl[2]_aluOut[63]_wide_mux_13_OUT<63>)
+     FDE:D                    -0.000          MPAlu/aluOut_63
+    ----------------------------------------
+    Total                     10.021ns (8.210ns logic, 1.811ns route)
+                                       (81.9% logic, 18.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 2431 / 1407
+-------------------------------------------------------------------------
+Offset:              1.998ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       MPreg/regStack_FF_447 (FF)
+  Destination Clock: Clock rising
+
+  Data Path: Reset to MPreg/regStack_FF_447
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           305   0.000   0.586  Reset_IBUF (Reset_IBUF)
+     LUT2:I0->O           16   0.043   0.696  MPreg/_n004411 (MPreg/_n0044_0)
+     LUT6:I0->O           32   0.043   0.469  MPreg/regStack_ClockEnableEqn_4161 (MPreg/regStack_ClockEnableEqn_416)
+     FDE:CE                    0.161          MPreg/regStack_FF_416
+    ----------------------------------------
+    Total                      1.998ns (0.247ns logic, 1.751ns route)
+                                       (12.4% logic, 87.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              0.705ns (Levels of Logic = 1)
+  Source:            MPAlu/aluOut_31 (FF)
+  Destination:       aluOut<31> (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: MPAlu/aluOut_31 to aluOut<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             33   0.236   0.469  MPAlu/aluOut_31 (MPAlu/aluOut_31)
+     OBUF:I->O                 0.000          aluOut_31_OBUF (aluOut<31>)
+    ----------------------------------------
+    Total                      0.705ns (0.236ns logic, 0.469ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |   10.021|    1.827|    2.202|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 44.00 secs
+Total CPU time to Xst completion: 44.18 secs
+ 
+--> 
+
+Total memory usage is 454076 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

@@ -1,0 +1,48 @@
+##############################################################
+#
+# Xilinx Core Generator version 14.7
+# Date: Thu Oct 12 16:40:38 2017
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+#  Generated from component: xilinx.com:ip:cdn_axi_bfm:2.1
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = false
+SET asysymbol = true
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = false
+SET designentry = Verilog
+SET device = xc7k325t
+SET devicefamily = kintex7
+SET flowvendor = Other
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET package = ffg900
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET speedgrade = -2
+SET verilogsim = true
+SET vhdlsim = false
+# END Project Options
+# BEGIN Select
+SELECT AXI_Bus_Functional_Model xilinx.com:ip:cdn_axi_bfm:2.1
+# END Select
+# BEGIN Parameters
+CSET component_name=usb_uart
+# END Parameters
+# BEGIN Extra information
+MISC pkg_timestamp=2012-08-21T16:22:17Z
+# END Extra information
+GENERATE
+# CRC: fb33c171

@@ -1,0 +1,896 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Reading design: AluWrapper.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "AluWrapper.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "AluWrapper"
+Output Format                      : NGC
+Target Device                      : xc7k325t-2-ffg900
+
+---- Source Options
+Top Module Name                    : AluWrapper
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Adder.v" into library work
+Parsing module <Adder>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Subtractor.v" into library work
+Parsing module <Subtractor>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Multiplication.v" into library work
+Parsing module <Multiplication>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Divider.v" into library work
+Parsing module <Divider>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Comparator.v" into library work
+Parsing module <Comparator>.
+Analyzing Verilog file "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\AluWrapper.v" into library work
+Parsing module <AluWrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <AluWrapper>.
+
+Elaborating module <Adder>.
+
+Elaborating module <Subtractor>.
+
+Elaborating module <Multiplication>.
+
+Elaborating module <Divider>.
+
+Elaborating module <Comparator>.
+WARNING:HDLCompiler:1127 - "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\AluWrapper.v" Line 54: Assignment to divSign ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <AluWrapper>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\AluWrapper.v".
+WARNING:Xst:647 - Input <Clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit subtractor for signal <divOut[31]_aluSrc2[31]_sub_6_OUT> created at line 107.
+    Found 33-bit adder for signal <n0153[32:0]> created at line 98.
+    Found 32-bit subtractor for signal <divOut[31]_aluSrc2[31]_sub_9_OUT> created at line 116.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<31>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<30>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<29>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<28>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<27>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<26>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<25>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<24>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<23>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<22>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<21>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<20>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<19>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<18>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<17>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<16>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<15>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<14>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<13>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<12>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<11>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<10>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<9>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<8>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<7>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<6>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<5>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<4>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<3>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<2>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<1>> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<0>> created at line 54.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divFlag1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divFlag2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<63>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<62>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aluOut<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <carryOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <divCount<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <divOut[31]_aluSrc2[31]_LessThan_1_o> created at line 94
+    Found 32-bit comparator greater for signal <divOut[31]_aluSrc2[31]_LessThan_7_o> created at line 107
+    Found 32-bit comparator greater for signal <divOut[31]_aluSrc2[31]_LessThan_10_o> created at line 116
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 100 Latch(s).
+	inferred   3 Comparator(s).
+	inferred 142 Multiplexer(s).
+Unit <AluWrapper> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Adder.v".
+    Found 33-bit adder for signal <n0022> created at line 31.
+    Found 33-bit adder for signal <n0026> created at line 32.
+    Found 33-bit adder for signal <BUS_0002_GND_2_o_add_4_OUT> created at line 32.
+    Found 33-bit adder for signal <BUS_0002_GND_2_o_add_6_OUT> created at line 32.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <Adder> synthesized.
+
+Synthesizing Unit <Subtractor>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Subtractor.v".
+    Found 32-bit adder for signal <compSrc2> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Subtractor> synthesized.
+
+Synthesizing Unit <Multiplication>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Multiplication.v".
+    Found 64-bit adder for signal <src1[31]_GND_4_o_add_5_OUT> created at line 29.
+    Found 64-bit adder for signal <BUS_0003_GND_4_o_add_10_OUT> created at line 30.
+    Found 33-bit adder for signal <n0029> created at line 31.
+    Found 33-bit adder for signal <n0028> created at line 31.
+    Found 32x32-bit multiplier for signal <src1[31]_src2[31]_MuLt_0_OUT> created at line 28.
+    Found 32x33-bit multiplier for signal <n0017> created at line 29.
+    Found 33x32-bit multiplier for signal <n0020> created at line 30.
+    Found 33x33-bit multiplier for signal <n0027> created at line 31.
+    Found 64-bit 4-to-1 multiplexer for signal <mulOut> created at line 27.
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   6 Multiplexer(s).
+Unit <Multiplication> synthesized.
+
+Synthesizing Unit <Divider>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Divider.v".
+    Found 32-bit subtractor for signal <src1[31]_src2[31]_sub_2_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <Divider> synthesized.
+
+Synthesizing Unit <Comparator>.
+    Related source file is "I:\xilinx_project\copy\new\Assignment_2_stable2_working_properly - Copy - Copy - Copy\Comparator.v".
+    Found 32-bit comparator equal for signal <src1[31]_src2[31]_equal_1_o> created at line 25
+    Found 32-bit comparator greater for signal <src1[31]_src2[31]_LessThan_2_o> created at line 25
+    Summary:
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <Comparator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 1
+ 33x32-bit multiplier                                  : 2
+ 33x33-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 25
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 19
+ 64-bit adder                                          : 1
+# Latches                                              : 100
+ 1-bit latch                                           : 100
+# Comparators                                          : 5
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+# Multiplexers                                         : 159
+ 1-bit 2-to-1 multiplexer                              : 114
+ 1-bit 7-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 7
+ 64-bit 2-to-1 multiplexer                             : 6
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 1
+ 33x32-bit multiplier                                  : 2
+ 33x33-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 24
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 18
+ 64-bit adder                                          : 1
+# Comparators                                          : 5
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+# Multiplexers                                         : 159
+ 1-bit 2-to-1 multiplexer                              : 114
+ 1-bit 7-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 7
+ 64-bit 2-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <AluWrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block AluWrapper, actual ratio is 0.
+Latch divFlag has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : AluWrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2529
+#      GND                         : 1
+#      INV                         : 318
+#      LUT1                        : 68
+#      LUT2                        : 254
+#      LUT3                        : 190
+#      LUT4                        : 173
+#      LUT5                        : 34
+#      LUT6                        : 203
+#      MUXCY                       : 673
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 613
+# FlipFlops/Latches                : 101
+#      LDC                         : 36
+#      LDE_1                       : 65
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 137
+#      IBUF                        : 68
+#      OBUF                        : 69
+# DSPs                             : 16
+#      DSP48E1                     : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k325tffg900-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              34  out of  407600     0%  
+ Number of Slice LUTs:                 1240  out of  203800     0%  
+    Number used as Logic:              1240  out of  203800     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1240
+   Number with an unused Flip Flop:    1206  out of   1240    97%  
+   Number with an unused LUT:             0  out of   1240     0%  
+   Number of fully used LUT-FF pairs:    34  out of   1240     2%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                         138
+ Number of bonded IOBs:                 137  out of    500    27%  
+    IOB Flip Flops/Latches:              67
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48E1s:                     16  out of    840     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Reset                              | IBUF+BUFG              | 65    |
+_n0487(_n0487<2>1:O)               | BUFG(*)(divCount_29)   | 33    |
+_n0334<1>(_n0334<1>1:O)            | NONE(*)(divFlag)       | 3     |
+-----------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.026ns (Maximum Frequency: 493.486MHz)
+   Minimum input arrival time before clock: 9.761ns
+   Maximum output required time after clock: 0.674ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_n0487'
+  Clock period: 2.026ns (frequency: 493.486MHz)
+  Total number of paths / destination ports: 528 / 32
+-------------------------------------------------------------------------
+Delay:               2.026ns (Levels of Logic = 34)
+  Source:            divCount_0 (LATCH)
+  Destination:       divCount_31 (LATCH)
+  Source Clock:      _n0487 falling
+  Destination Clock: _n0487 falling
+
+  Data Path: divCount_0 to divCount_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.330   0.339  divCount_0 (divCount_0)
+     INV:I->O              1   0.054   0.000  Madd_n0153[32:0]_lut<0>_INV_0 (Madd_n0153[32:0]_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  Madd_n0153[32:0]_cy<0> (Madd_n0153[32:0]_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<1> (Madd_n0153[32:0]_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<2> (Madd_n0153[32:0]_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<3> (Madd_n0153[32:0]_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<4> (Madd_n0153[32:0]_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<5> (Madd_n0153[32:0]_cy<5>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<6> (Madd_n0153[32:0]_cy<6>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<7> (Madd_n0153[32:0]_cy<7>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<8> (Madd_n0153[32:0]_cy<8>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<9> (Madd_n0153[32:0]_cy<9>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<10> (Madd_n0153[32:0]_cy<10>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<11> (Madd_n0153[32:0]_cy<11>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<12> (Madd_n0153[32:0]_cy<12>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<13> (Madd_n0153[32:0]_cy<13>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<14> (Madd_n0153[32:0]_cy<14>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<15> (Madd_n0153[32:0]_cy<15>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<16> (Madd_n0153[32:0]_cy<16>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<17> (Madd_n0153[32:0]_cy<17>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<18> (Madd_n0153[32:0]_cy<18>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<19> (Madd_n0153[32:0]_cy<19>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<20> (Madd_n0153[32:0]_cy<20>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<21> (Madd_n0153[32:0]_cy<21>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<22> (Madd_n0153[32:0]_cy<22>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<23> (Madd_n0153[32:0]_cy<23>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<24> (Madd_n0153[32:0]_cy<24>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<25> (Madd_n0153[32:0]_cy<25>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<26> (Madd_n0153[32:0]_cy<26>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<27> (Madd_n0153[32:0]_cy<27>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<28> (Madd_n0153[32:0]_cy<28>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<29> (Madd_n0153[32:0]_cy<29>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_n0153[32:0]_cy<30> (Madd_n0153[32:0]_cy<30>)
+     XORCY:CI->O           2   0.262   0.355  Madd_n0153[32:0]_xor<31> (n0153[32:0]<31>)
+     LUT2:I1->O            1   0.043   0.000  Mmux_aluCntrl[2]_divCount[31]_wide_mux_16_OUT<31>11 (aluCntrl[2]_divCount[31]_wide_mux_16_OUT<31>)
+     LDC:D                    -0.034          divCount_31
+    ----------------------------------------
+    Total                      2.026ns (1.332ns logic, 0.694ns route)
+                                       (65.7% logic, 34.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_n0334<1>'
+  Clock period: 0.778ns (frequency: 1285.099MHz)
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               0.778ns (Levels of Logic = 1)
+  Source:            divFlag (LATCH)
+  Destination:       divFlag2 (LATCH)
+  Source Clock:      _n0334<1> falling
+  Destination Clock: _n0334<1> falling
+
+  Data Path: divFlag to divFlag2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.330   0.405  divFlag (divFlag_OBUF)
+     LUT6:I4->O            1   0.043   0.000  Mmux_aluCntrl[2]_divFlag2_Mux_14_o11 (aluCntrl[2]_divFlag2_Mux_14_o)
+     LDC:D                    -0.034          divFlag2
+    ----------------------------------------
+    Total                      0.778ns (0.373ns logic, 0.405ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Reset'
+  Total number of paths / destination ports: 37619730336 / 130
+-------------------------------------------------------------------------
+Offset:              9.761ns (Levels of Logic = 55)
+  Source:            aluSrc2<0> (PAD)
+  Destination:       aluOut_63 (LATCH)
+  Destination Clock: Reset rising
+
+  Data Path: aluSrc2<0> to aluOut_63
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.000   0.461  aluSrc2_0_IBUF (aluSrc2_0_IBUF)
+     LUT1:I0->O            1   0.043   0.000  mul/Madd_n0028_cy<0>_rt (mul/Madd_n0028_cy<0>_rt)
+     MUXCY:S->O            1   0.238   0.000  mul/Madd_n0028_cy<0> (mul/Madd_n0028_cy<0>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<1> (mul/Madd_n0028_cy<1>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<2> (mul/Madd_n0028_cy<2>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<3> (mul/Madd_n0028_cy<3>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<4> (mul/Madd_n0028_cy<4>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<5> (mul/Madd_n0028_cy<5>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<6> (mul/Madd_n0028_cy<6>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<7> (mul/Madd_n0028_cy<7>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<8> (mul/Madd_n0028_cy<8>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<9> (mul/Madd_n0028_cy<9>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<10> (mul/Madd_n0028_cy<10>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<11> (mul/Madd_n0028_cy<11>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<12> (mul/Madd_n0028_cy<12>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<13> (mul/Madd_n0028_cy<13>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<14> (mul/Madd_n0028_cy<14>)
+     MUXCY:CI->O           1   0.014   0.000  mul/Madd_n0028_cy<15> (mul/Madd_n0028_cy<15>)
+     XORCY:CI->O           3   0.262   0.351  mul/Madd_n0028_xor<16> (mul/n0028<16>)
+     DSP48E1:A16->PCOUT47    1   2.879   0.000  mul/Mmult_n0027 (mul/Mmult_n0027_PCOUT_to_mul/Mmult_n00271_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.219   0.000  mul/Mmult_n00271 (mul/Mmult_n00271_PCOUT_to_mul/Mmult_n00272_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.219   0.000  mul/Mmult_n00272 (mul/Mmult_n00272_PCOUT_to_mul/Mmult_n00273_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.077   0.495  mul/Mmult_n00273 (mul/n0027<34>)
+     LUT6:I3->O            1   0.043   0.000  mul/Mmux_mulOut3_A281 (mul/Mmux_mulOut3_rs_A<34>)
+     MUXCY:S->O            1   0.238   0.000  mul/Mmux_mulOut3_rs_cy<34> (mul/Mmux_mulOut3_rs_cy<34>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<35> (mul/Mmux_mulOut3_rs_cy<35>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<36> (mul/Mmux_mulOut3_rs_cy<36>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<37> (mul/Mmux_mulOut3_rs_cy<37>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<38> (mul/Mmux_mulOut3_rs_cy<38>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<39> (mul/Mmux_mulOut3_rs_cy<39>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<40> (mul/Mmux_mulOut3_rs_cy<40>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<41> (mul/Mmux_mulOut3_rs_cy<41>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<42> (mul/Mmux_mulOut3_rs_cy<42>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<43> (mul/Mmux_mulOut3_rs_cy<43>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<44> (mul/Mmux_mulOut3_rs_cy<44>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<45> (mul/Mmux_mulOut3_rs_cy<45>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<46> (mul/Mmux_mulOut3_rs_cy<46>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<47> (mul/Mmux_mulOut3_rs_cy<47>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<48> (mul/Mmux_mulOut3_rs_cy<48>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<49> (mul/Mmux_mulOut3_rs_cy<49>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<50> (mul/Mmux_mulOut3_rs_cy<50>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<51> (mul/Mmux_mulOut3_rs_cy<51>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<52> (mul/Mmux_mulOut3_rs_cy<52>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<53> (mul/Mmux_mulOut3_rs_cy<53>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<54> (mul/Mmux_mulOut3_rs_cy<54>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<55> (mul/Mmux_mulOut3_rs_cy<55>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<56> (mul/Mmux_mulOut3_rs_cy<56>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<57> (mul/Mmux_mulOut3_rs_cy<57>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<58> (mul/Mmux_mulOut3_rs_cy<58>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<59> (mul/Mmux_mulOut3_rs_cy<59>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<60> (mul/Mmux_mulOut3_rs_cy<60>)
+     MUXCY:CI->O           1   0.013   0.000  mul/Mmux_mulOut3_rs_cy<61> (mul/Mmux_mulOut3_rs_cy<61>)
+     MUXCY:CI->O           0   0.013   0.000  mul/Mmux_mulOut3_rs_cy<62> (mul/Mmux_mulOut3_rs_cy<62>)
+     XORCY:CI->O           1   0.262   0.350  mul/Mmux_mulOut3_rs_xor<63> (mulOut<63>)
+     LUT4:I3->O            1   0.043   0.000  Mmux_aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<63>11 (aluCntrl[2]_aluOut[63]_wide_mux_12_OUT<63>)
+     LDE_1:D                  -0.034          aluOut_63
+    ----------------------------------------
+    Total                      9.761ns (8.104ns logic, 1.657ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_n0487'
+  Total number of paths / destination ports: 281401 / 66
+-------------------------------------------------------------------------
+Offset:              4.564ns (Levels of Logic = 37)
+  Source:            aluSrc2<13> (PAD)
+  Destination:       divFlag1 (LATCH)
+  Destination Clock: _n0487 falling
+
+  Data Path: aluSrc2<13> to divFlag1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   0.000   0.719  aluSrc2_13_IBUF (aluSrc2_13_IBUF)
+     LUT6:I0->O            1   0.043   0.613  aluDiv/src2[31]_reduce_nor_1_o1 (aluDiv/src2[31]_reduce_nor_1_o1)
+     LUT6:I0->O          113   0.043   0.550  aluDiv/src2[31]_reduce_nor_1_o7 (aluDiv/src2[31]_reduce_nor_1_o)
+     LUT2:I0->O            4   0.043   0.356  aluDiv/Mmux_divOut11 (divOut<0>)
+     MUXCY:DI->O           1   0.228   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<0> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<1> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<2> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<3> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<4> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<5> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<5>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<6> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<6>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<7> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<7>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<8> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<8>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<9> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<9>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<10> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<10>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<11> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<11>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<12> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<12>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<13> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<13>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<14> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<14>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<15> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<15>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<16> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<16>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<17> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<17>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<18> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<18>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<19> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<19>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<20> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<20>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<21> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<21>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<22> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<22>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<23> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<23>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<24> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<24>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<25> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<25>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<26> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<26>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<27> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<27>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<28> (Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_cy<28>)
+     XORCY:CI->O           2   0.262   0.527  Msub_divOut[31]_aluSrc2[31]_sub_6_OUT_xor<29> (divOut[31]_aluSrc2[31]_sub_6_OUT<29>)
+     LUT4:I0->O            0   0.043   0.000  Mcompar_divOut[31]_aluSrc2[31]_LessThan_7_o_lutdi14 (Mcompar_divOut[31]_aluSrc2[31]_LessThan_7_o_lutdi14)
+     MUXCY:DI->O           1   0.365   0.350  Mcompar_divOut[31]_aluSrc2[31]_LessThan_7_o_cy<14> (Mcompar_divOut[31]_aluSrc2[31]_LessThan_7_o_cy<14>)
+     LUT5:I4->O            1   0.043   0.000  Mcompar_divOut[31]_aluSrc2[31]_LessThan_7_o_cy<15>_inv1 (divOut[31]_aluSrc2[31]_LessThan_7_o)
+     LDC:D                    -0.034          divFlag1
+    ----------------------------------------
+    Total                      4.564ns (1.448ns logic, 3.116ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_n0334<1>'
+  Total number of paths / destination ports: 129116 / 6
+-------------------------------------------------------------------------
+Offset:              5.077ns (Levels of Logic = 37)
+  Source:            aluSrc2<13> (PAD)
+  Destination:       divFlag2 (LATCH)
+  Destination Clock: _n0334<1> falling
+
+  Data Path: aluSrc2<13> to divFlag2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   0.000   0.719  aluSrc2_13_IBUF (aluSrc2_13_IBUF)
+     LUT6:I0->O            1   0.043   0.613  aluDiv/src2[31]_reduce_nor_1_o1 (aluDiv/src2[31]_reduce_nor_1_o1)
+     LUT6:I0->O          113   0.043   0.550  aluDiv/src2[31]_reduce_nor_1_o7 (aluDiv/src2[31]_reduce_nor_1_o)
+     LUT2:I0->O            2   0.043   0.344  divOut<1>1 (divOut<1>)
+     MUXCY:DI->O           1   0.228   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<1> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<2> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<3> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<4> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<5> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<6> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<7> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<8> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<9> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<10> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<11> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<12> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<13> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<13>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<14> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<14>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<15> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<15>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<16> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<16>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<17> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<17>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<18> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<18>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<19> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<19>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<20> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<20>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<21> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<21>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<22> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<22>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<23> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<23>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<24> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<24>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<25> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<25>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<26> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<26>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<27> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<27>)
+     MUXCY:CI->O           1   0.013   0.000  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<28> (Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_cy<28>)
+     XORCY:CI->O           2   0.262   0.527  Msub_divOut[31]_aluSrc2[31]_sub_9_OUT_xor<29> (divOut[31]_aluSrc2[31]_sub_9_OUT<29>)
+     LUT4:I0->O            0   0.043   0.000  Mcompar_divOut[31]_aluSrc2[31]_LessThan_10_o_lutdi14 (Mcompar_divOut[31]_aluSrc2[31]_LessThan_10_o_lutdi14)
+     MUXCY:DI->O           1   0.365   0.350  Mcompar_divOut[31]_aluSrc2[31]_LessThan_10_o_cy<14> (Mcompar_divOut[31]_aluSrc2[31]_LessThan_10_o_cy<14>)
+     LUT5:I4->O            1   0.043   0.495  Mcompar_divOut[31]_aluSrc2[31]_LessThan_10_o_cy<15> (Mcompar_divOut[31]_aluSrc2[31]_LessThan_10_o_cy<15>)
+     LUT6:I3->O            1   0.043   0.000  Mmux_aluCntrl[2]_divFlag2_Mux_14_o11 (aluCntrl[2]_divFlag2_Mux_14_o)
+     LDC:D                    -0.034          divFlag2
+    ----------------------------------------
+    Total                      5.077ns (1.478ns logic, 3.599ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Reset'
+  Total number of paths / destination ports: 65 / 65
+-------------------------------------------------------------------------
+Offset:              0.673ns (Levels of Logic = 1)
+  Source:            aluOut_63 (LATCH)
+  Destination:       aluOut<63> (PAD)
+  Source Clock:      Reset rising
+
+  Data Path: aluOut_63 to aluOut<63>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.334   0.339  aluOut_63 (aluOut_63)
+     OBUF:I->O                 0.000          aluOut_63_OBUF (aluOut<63>)
+    ----------------------------------------
+    Total                      0.673ns (0.334ns logic, 0.339ns route)
+                                       (49.6% logic, 50.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_n0334<1>'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.674ns (Levels of Logic = 1)
+  Source:            divFlag2 (LATCH)
+  Destination:       divFlag2 (PAD)
+  Source Clock:      _n0334<1> falling
+
+  Data Path: divFlag2 to divFlag2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.330   0.344  divFlag2 (divFlag2_OBUF)
+     OBUF:I->O                 0.000          divFlag2_OBUF (divFlag2)
+    ----------------------------------------
+    Total                      0.674ns (0.330ns logic, 0.344ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_n0487'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.669ns (Levels of Logic = 1)
+  Source:            divFlag1 (LATCH)
+  Destination:       divFlag1 (PAD)
+  Source Clock:      _n0487 falling
+
+  Data Path: divFlag1 to divFlag1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.330   0.339  divFlag1 (divFlag1_OBUF)
+     OBUF:I->O                 0.000          divFlag1_OBUF (divFlag1)
+    ----------------------------------------
+    Total                      0.669ns (0.330ns logic, 0.339ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Reset
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+_n0487         |         |    2.782|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock _n0334<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+_n0334<1>      |         |         |    0.778|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock _n0487
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+_n0487         |         |         |    2.026|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.67 secs
+ 
+--> 
+
+Total memory usage is 419552 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  102 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

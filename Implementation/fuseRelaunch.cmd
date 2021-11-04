@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/test_MP_isim_beh.exe" -prj "I:/xilinx_project/copy/new/Assignment_2_stable2_working_properly - Copy - Copy - Copy/test_MP_beh.prj" "work.test_MP" "work.glbl" 
